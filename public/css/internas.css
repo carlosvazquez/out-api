@@ -1,0 +1,40 @@
+    
+.header1{
+    text-align: center;
+    color: #000;
+    font-size: 1.5em;
+    background-attachment: scroll;
+    background-image: url(../img/Habitacion3.jpg);
+    background-position:center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.header2{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    background-attachment: scroll;
+    background-image: url(../img/1.jpg);
+    background-position:center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.header3{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    background-attachment: scroll;
+    background-image: url(../img/piedritas.jpg);
+    background-position:center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
