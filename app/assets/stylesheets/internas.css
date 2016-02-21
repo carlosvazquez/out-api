@@ -1,0 +1,29 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+p{
+    font-size: 1.1em;
+}
+.padding_20{
+    padding: 12em;
+    text-align: center;
+}
+.ingresa{
+    background-size: cover;
+     -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
