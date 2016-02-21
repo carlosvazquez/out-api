@@ -9,6 +9,7 @@ users = User.create!([
  { :username    =>  'admin',
    :firstname   =>  'Admin',
    :lastname    =>  'Admin',
+   :rfc         =>  'VAMM800722ADM',
    :email       =>  'admin@hack.com',
    :password    =>  'demo1234',
    :password_confirmation  =>  'demo1234',
