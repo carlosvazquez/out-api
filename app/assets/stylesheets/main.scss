@@ -4,7 +4,7 @@
 @import "font-awesome";
 
 body {padding-top: 50px;}
-
+body.home.index {padding-top: 0px;}
 body.sessions.new {
   nav.navbar.navbar-default {display: none;}
   .well {background-color: #ffffff;}

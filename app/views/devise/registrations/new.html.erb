@@ -30,11 +30,13 @@
     <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
   </div>
   <div class="form-group">
-  <%= f.label 'Soy arrendatario' %>
+  <%= f.label 'Soy un huesped: ' %>
   <%= f.check_box :owner, {checked: true}, '1', '0' %>
+  <%= f.label 'Quiero ser anfitrión: ' %>
+  <%= f.check_box :owner, {checked: false}, '1', '0' %>
   </div>
   <div class="form-group">
-  <%= f.label 'Sí estoy dispuest@ a una investigacion domiciliaria' %>
+  <%= f.label 'Sí estoy dispuest@ a una investigacion domiciliaria: ' %>
   <%= f.check_box :terms_accepted, {checked: true}, '1', '0' %>
   </div>
 
