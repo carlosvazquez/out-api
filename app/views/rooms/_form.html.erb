@@ -1,4 +1,4 @@
-<%= form_for(@room) do |f| %>
+<%= simple_form_for @room do |f| %>
   <% if @room.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
@@ -21,7 +21,7 @@
   </div>
   <div class="form-group">
     <%= f.label 'Tipo de hospedaje' %><br>
-    <%= f.select(:type, ['Casa','Departamento','Habitación Privada', 'Habitación Compartida'], :prompt => 'Seleccione uno',  :class => 'form-control' ) %>
+    <%= f.input :inmueble, collection: ['Casa','Departamento','Habitación Privada', 'Habitación Compartida'], :class => 'form-control' %>
   </div>
   <div class="form-group">
     <%= f.label 'Precio por noche' %><br>
@@ -29,32 +29,32 @@
   </div>
   <div class="form-group">
     <%= f.label 'Habitaciones disponibles' %><br>
-    <%= f.text_field :rooms_available, :class => 'form-control' %>
+    <%= f.input :rooms_available, collection: 1..6, :class => 'form-control' %>
   </div>
   <h3>Preferencias de huésped:</h3>
   <div class="form-group">
     <%= f.label 'Gays' %><br>
-    <%= f.check_box :gays, {checked: true}, '1', '0' %>
+    <%= f.input :gays, as: :boolean, checked_value: true, unchecked_value: false %>
   </div>
   <div class="form-group">
     <%= f.label 'Lesbianas' %><br>
-    <%= f.check_box :lesbianas, {checked: true}, '1', '0' %>
+    <%= f.input :lesbianas, as: :boolean, checked_value: true, unchecked_value: false %>
   </div>
   <div class="form-group">
     <%= f.label 'Transexuales' %><br>
-    <%= f.check_box :transexuales, {checked: true}, '1', '0' %>
+    <%= f.input :transexuales, as: :boolean, checked_value: true, unchecked_value: false %>
   </div>
   <div class="form-group">
     <%= f.label 'Bisexuales' %><br>
-    <%= f.check_box :bisexuales, {checked: true}, '1', '0' %>
+    <%= f.input :bisexuales, as: :boolean, checked_value: true, unchecked_value: false %>
   </div>
   <div class="form-group">
     <%= f.label 'Tercer género' %><br>
-    <%= f.check_box :tercer_genero, {checked: true}, '1', '0' %>
+    <%= f.input :tercer_genero, as: :boolean, checked_value: true, unchecked_value: false %>
   </div>
   <div class="form-group">
     <%= f.label 'Queer' %><br>
-    <%= f.check_box :queer, {checked: true}, '1', '0' %>
+    <%= f.input :queer, as: :boolean, checked_value: true, unchecked_value: false %>
   </div>
   <div class="form-group">
     <%= f.submit 'Publicar', :class => 'btn btn-success' %>

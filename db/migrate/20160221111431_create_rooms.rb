@@ -4,7 +4,7 @@ class CreateRooms < ActiveRecord::Migration
       t.references :user, index: true, foreign_key: true
       t.string :title
       t.text :description
-      t.string :type
+      t.string :inmueble
       t.integer :price
       t.integer :rooms_available
       t.boolean :gays,              null: false, default: "true"

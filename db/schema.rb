@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160221111431) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "description"
-    t.string   "type"
+    t.string   "inmueble"
     t.integer  "price"
     t.integer  "rooms_available"
     t.boolean  "gays",            default: true, null: false
