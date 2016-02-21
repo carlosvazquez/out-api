@@ -2,6 +2,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
   def change
     create_table(:users) do |t|
       ## Database authenticatable
+      t.string :username
+      t.string :firstname
+      t.string :lastname
+
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
@@ -20,7 +24,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       t.boolean :admin,              null: false, default: "false"
-      t.boolean :owner,              null: false, default: ""
+      t.boolean :owner
+      t.boolean :terms_accepted,     null: false, default: "false"
 
       ## Confirmable
       # t.string   :confirmation_token
@@ -36,9 +41,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-
+    add_index :users, :username,             unique: true
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
+
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
   end

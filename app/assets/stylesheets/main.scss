@@ -2,3 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "font-awesome";
+
+body {padding-top: 50px;}
+
+body.sessions.new {
+  nav.navbar.navbar-default {display: none;}
+  .well {background-color: #ffffff;}
+  footer {display: none;}
+}
