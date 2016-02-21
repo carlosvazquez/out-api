@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'devise'
@@ -34,6 +35,7 @@ group :production do
   gem 'rb-readline', '~> 0.5.3'
   gem 'rails_12factor'
   gem 'heroku-deflater'
+  gem 'pg'
 end
 
 group :development, :test do
